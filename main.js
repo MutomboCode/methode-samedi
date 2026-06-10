@@ -131,7 +131,10 @@
         body:    new FormData(form),
       });
 
-      var data = await response.json();
+      var text = await response.text();
+      console.log('Web3Forms status:', response.status, 'body:', text);
+
+      var data = JSON.parse(text);
 
       if (data.success) {
         form.reset();
@@ -140,7 +143,8 @@
       } else {
         throw new Error(data.message || 'Falha no envio');
       }
-    } catch (_err) {
+    } catch (err) {
+      console.error('Erro no envio:', err);
       errorMsg.hidden = false;
     } finally {
       submitBtn.disabled = false;
