@@ -1012,10 +1012,24 @@ h3 { font-size: var(--fs-h3); line-height: var(--lh-heading); font-weight: var(-
   background: var(--color-surface-alt);
 }
 
+.pricing__launch-banner {
+  margin-top: var(--space-6);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
 .pricing__grid {
   display: grid;
   gap: var(--space-6);
-  margin-top: var(--space-12);
+  margin-top: var(--space-8);
 }
 
 @media (min-width: 768px) {
